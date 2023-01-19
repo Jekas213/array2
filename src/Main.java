@@ -48,11 +48,10 @@ public class Main {
         System.out.println("Задача 3");
         int[] arr = generateRandomArray();
         double sumForMonth = 0;
-        double averageForMonth = 0;
         for (int i : arr) {
             sumForMonth += i;
-            averageForMonth = sumForMonth / 30;
         }
+        double averageForMonth = sumForMonth / arr.length;;
         System.out.printf("Средняя сумма трат за месяц составила %.2f рублей", averageForMonth);
         System.out.println();
     }
