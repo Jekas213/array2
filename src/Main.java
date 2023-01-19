@@ -51,16 +51,30 @@ public class Main {
         for (int i : arr) {
             sumForMonth += i;
         }
-        double averageForMonth = sumForMonth / arr.length;;
+        double averageForMonth = sumForMonth / arr.length;
         System.out.printf("Средняя сумма трат за месяц составила %.2f рублей", averageForMonth);
         System.out.println();
     }
 
-    public static void task4() {
+    /*public static void task4() {
         System.out.println("Задача 4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         for (int i = reverseFullName.length - 1; i >= 0 ; i--) {
             System.out.print(reverseFullName[i]);
         }
+    }*/
+    public static void task4() {
+        System.out.println("Задача 4");
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        int n = reverseFullName.length;
+        for (int i = 0; i < n / 2; i++) {
+            char temp = reverseFullName[n - i - 1];
+            reverseFullName[n - i - 1] = reverseFullName[i];
+            reverseFullName[i] = temp;
+        }
+        for (char c: reverseFullName) {
+            System.out.print(c);
+        }
+
     }
 }
